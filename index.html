@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-top: 50px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+            margin: 10px;
+            background-color: #3498db;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to the Home Page</h2>
+    <a href="{{ url_for('login') }}"><button>Login</button></a>
+    <a href="{{ url_for('register') }}"><button>Register</button></a>
+</body>
+</html>

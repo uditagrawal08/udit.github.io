@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Additional CSS styles for customization */
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .image-box {
+            border: 2px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header Section -->
+    <div class="header">
+        <h1 class="text-3xl font-bold">Dashboard</h1>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto p-4">
+        <h2 class="text-3xl font-semibold mt-6 mb-6">Welcome, {{ user.username }}!</h2>
+
+        <!-- Image Box Section -->
+        <div class="image-box grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div class="border border-gray-300 rounded-md overflow-hidden">
+                <img src="../images/mobile-9788.png" alt="Mobile Phone 1" class="w-full h-auto">
+            </div>
+            <div class="border border-gray-300 rounded-md overflow-hidden">
+                <img src="../images/mobile-9788.png" alt="Mobile Phone 2" class="w-full h-auto">
+            </div>
+            <!-- Add more images as needed -->
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer mt-8">
+            <a href="{{ url_for('logout') }}" class="text-blue-500 underline">Logout</a>
+            <a href="{{ url_for('contact') }}" class="text-blue-500 underline ml-4">Contact Us</a>
+        </div>
+    </div>
+</body>
+
+</html>
